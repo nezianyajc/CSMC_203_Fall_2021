@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 3 resources" deleteContents="true" description="Delete 3 resources" element1="/FXDriver" element2="/GUILab" element3="/GUILabFX" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="3" stamp="1624913348218"/>
+</session>

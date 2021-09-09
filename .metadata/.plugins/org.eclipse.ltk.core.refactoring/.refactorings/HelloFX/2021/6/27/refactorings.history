@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 elements to &apos;HelloFX/src/(default package)&apos;&#x0A;- Original project: &apos;HelloFX&apos;&#x0A;- Destination element: &apos;HelloFX/src/(default package)&apos;&#x0A;- Original elements:&#x0A;     DataManager.java&#x0A;     FXDriver.java&#x0A;     FXMainPane.java&#x0A;- Update references to refactored element" description="Move files" destination="/src&lt;" element1="DataManager.java" element2="FXDriver.java" element3="FXMainPane.java" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1624913507832" units="0" version="1.0"/>
+</session>
