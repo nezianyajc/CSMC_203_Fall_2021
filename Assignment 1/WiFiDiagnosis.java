@@ -15,25 +15,27 @@ public class WiFiDiagnosis {
         System.out.print(" Are you having trouble with your WiFi " + userName + " ?");
         userInput = s.next();
         userInput = userInput.toLowerCase();
+        //Correcting user input for the wrong case 
 
         if (userInput.contains("no")) {
             System.out.println(" You're done. The WiFi is working");
-
+            
         } else if (userInput.contains("yes")) {
             System.out.println("Please enter the number 1");
             issueNumber = s.nextInt();
             if (issueNumber != 1) {
+            	//Checking for invalid input
                 System.out.println("Please enter the number 1 if you need help. The program will end now.");
                 issueNumber = -1;
             }
             while (issueNumber >= 0) {
-
+            	//user input starts while loop
                 switch (issueNumber) {
                     case 0:
                         System.out.println(" You're done. The WiFi is working");
                         issueNumber = -1;
                         break;
-
+                        //
                     case 1:
                         System.out.println("Reboot the computer and try again");
                         System.out.println("Did that fix the problem? Enter yes or no.");
