@@ -18,6 +18,7 @@ public class RandomNumberGuesser {
         System.out.println(randomNum);
         System.out.println(userName + " please select a number between 0 and 100");
         guess = guessObj.nextInt();
+        guessObj.nextLine();
         nextGuess = 0;
         lowGuess = 0;
         highGuess = 0;
@@ -33,6 +34,7 @@ public class RandomNumberGuesser {
                     System.out.println(randomNum);
                     System.out.println(userName + " please select a number between 0 and 100");
                     guess = guessObj.nextInt();
+                    guessObj.nextLine();
 
                 } else if (playAgain.contains("no")) {
                     System.out.println(userName + " thanks for playing...");
@@ -41,18 +43,20 @@ public class RandomNumberGuesser {
 
             } else if (guess != randomNum) {
 
-                if (guess > randomNum && count < 2) {
+                if (guess > randomNum && count <= 1) {
 
                     System.out.println(count);
                     System.out.println("Your guess is too high");
                     System.out.println("Enter your next guess between 0 and " + guess);
                     highGuess = guessObj.nextInt();
+                    guessObj.nextLine();
 
-                } else if (guess < randomNum && count < 2) {
+                } else if (guess < randomNum && count <= 1) {
                     System.out.println(count);
                     System.out.println("Your guess is too low");
                     System.out.println("Enter your next guess between " + guess + " and 100");
                     lowGuess = guessObj.nextInt();
+                    guessObj.nextLine();
 
                 }
 
@@ -60,8 +64,31 @@ public class RandomNumberGuesser {
                     System.out.println("Your number of guesses is " + count);
                     if (count == 1) {
                         System.out.println("Please enter your first guess");
+                        nextGuess = guessObj.nextInt();
+                        guessObj.nextLine();
+
+                    } else if (count > 1) {
+                        System.out.println("Please enter your next guess");
+                        nextGuess = guessObj.nextInt();
+                        guessObj.nextLine();
+                        if (nextGuess > guess) {
+                            lowGuess = guess;
+                            RNG.inputValidation(nextGuess, lowGuess, 100);
+                        } else if (nextGuess < guess) {
+                            highGuess = guess;
+                            RNG.inputValidation(nextGuess, 0, highGuess);
+                        }
+
                     }
-                    nextGuess = guessObj.nextInt();
+
+                    if (nextGuess > guess) {
+                        lowGuess = guess;
+                        RNG.inputValidation(nextGuess, lowGuess, 100);
+                    } else if (nextGuess < guess) {
+                        highGuess = guess;
+                        RNG.inputValidation(nextGuess, 0, highGuess);
+                    }
+
                     if (nextGuess == randomNum) {
                         System.out.print("Congratulations you guessed correctly. Try again? 'yes' or 'no' ");
                         playAgain = guessObj.nextLine();
@@ -70,21 +97,44 @@ public class RandomNumberGuesser {
                             count = 0;
                             System.out.println(userName + " please select a number between 0 and 100");
                             guess = guessObj.nextInt();
+                            guessObj.nextLine();
                         } else if (playAgain.contains("no")) {
-                            System.out.println(userName + "thanks for playing...");
+                            System.out.println(userName + " thanks for playing...");
+                            flag = false;
+
                         }
                     }
-
-                    if (guess != randomNum && count >= 1) {
-                        RNG.inputValidation(nextGuess, lowGuess, 100);
-                    }
+                    RNG.inputValidation(nextGuess, 0, highGuess);
 
                 } else if (guess < randomNum && count >= 1) {
                     System.out.println("Your number of guesses is " + count);
                     if (count == 1) {
                         System.out.println("Please enter your first guess");
+                        nextGuess = guessObj.nextInt();
+                        guessObj.nextLine();
+
+                    } else if (count > 1) {
+                        System.out.println("Please enter your next guess");
+                        nextGuess = guessObj.nextInt();
+                        guessObj.nextLine();
+                        if (nextGuess > guess) {
+                            lowGuess = guess;
+                            RNG.inputValidation(nextGuess, lowGuess, 100);
+                        } else if (nextGuess < guess) {
+                            highGuess = guess;
+                            RNG.inputValidation(nextGuess, 0, highGuess);
+                        }
+
                     }
-                    nextGuess = guessObj.nextInt();
+
+                    if (nextGuess > guess) {
+                        lowGuess = guess;
+                        RNG.inputValidation(nextGuess, lowGuess, 100);
+                    } else if (nextGuess < guess) {
+                        highGuess = guess;
+                        RNG.inputValidation(nextGuess, 0, highGuess);
+                    }
+
                     if (nextGuess == randomNum) {
                         System.out.print("Congratulations you guessed correctly. Try again? 'yes' or 'no' ");
                         playAgain = guessObj.nextLine();
@@ -93,13 +143,13 @@ public class RandomNumberGuesser {
                             count = 0;
                             System.out.println(userName + " please select a number between 0 and 100");
                             guess = guessObj.nextInt();
+                            guessObj.nextLine();
                         } else if (playAgain.contains("no")) {
-                            System.out.println(userName + "thanks for playing...");
+                            System.out.println(userName + " thanks for playing...");
+                            flag = false;
                         }
                     }
-                    if (guess != randomNum && count >= 1) {
-                        RNG.inputValidation(nextGuess, lowGuess, 100);
-                    }
+                    RNG.inputValidation(nextGuess, lowGuess, 100);
                 }
             }
             count++;
