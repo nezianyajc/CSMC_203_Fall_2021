@@ -55,16 +55,15 @@ public class ManagementCompanyTest {
 	}
 	
 
-	/*
-	@Test
-	public void testDisplayPropertyAtIndex() {
-		//find and print the third property
-		String prop = m.displayPropertyAtIndex(2);
-		//split the toString into an array
-		String[] propArray = prop.split(" ");
-		//test that the last element of the toString is the rent of the third property
-		assertEquals(propArray[propArray.length-1],"4905.0");
-	}
-	*/
+
+//	@Test
+//	public void testDisplayPropertyAtIndex() {
+//		//find and print the third property
+//		String prop = m.displayPropertyAtIndex(2);
+//		//split the toString into an array
+//		String[] propArray = prop.split(" ");
+//		//test that the last element of the toString is the rent of the third property
+//		assertEquals(propArray[propArray.length-1],"4905.0");
+//	}
 
 }
