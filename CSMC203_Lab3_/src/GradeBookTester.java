@@ -47,7 +47,9 @@ class GradeBookTester {
 
 	@Test
 	void testAddScore() {
-		assertTrue((gradeBookObjOne.toString()).equals("95.0 85.0 "));
+		assertTrue(gradeBookObjOne.toString().equals("95.0 85.0 "));
+		assertTrue(gradeBookObjTwo.toString().equals("64.0 98.0 "));
+
 	}
 
 	@Test

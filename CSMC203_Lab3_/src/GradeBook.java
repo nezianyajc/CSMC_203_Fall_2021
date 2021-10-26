@@ -25,14 +25,13 @@ public class GradeBook {
         return scoresSize;
     }
 
-//    public String toString(){
-//        String charCap ="";
-//        for(int i = 0; i < scoresSize; i++) {
-//            charCap += scores[i] + "";
-//        }
-//        System.out.println(charCap);
-//        return charCap; 
-//    }
+    public String toString(){
+        String charCap ="";
+        for(int i = 0; i < scoresSize; i++) {
+            charCap += scores[i] + " ";
+        }
+        return charCap; 
+    }
 
     public boolean addScore(double score)
     {
