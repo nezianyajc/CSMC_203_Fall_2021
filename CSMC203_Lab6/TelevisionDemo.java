@@ -55,7 +55,7 @@ public class TelevisionDemo
 		//change the channel on the television
 		portable.setChannel(station);
 		//increase the volume of the television
-		portable.increaseVolume();
+//		portable.increaseVolume();
 		//display the the current channel and volume of the television
 		System.out.println("Channel: " + portable.getChannel() +
 				", Volume: " + portable.getVolume());

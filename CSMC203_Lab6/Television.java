@@ -13,12 +13,13 @@ public class Television {
 	private int channel = 2;
 	private int volume = 20;
 	
+	// @param string for brand int for screen size
 	public Television(String brand, int size) {
 		this.MANUFACTURER = brand;
 		this.SCREEN_SIZE = size;
 	}
 	
-	
+	//@param int for channel
 	public void setChannel(int chan) {
 		this.channel =  chan;
 	}
@@ -44,18 +45,21 @@ public class Television {
 		}
 	}
 	
+	//@return integer 
 	public int getChannel() {
 		return channel;
 	}
-	
+	//@return integer
 	public int getVolume() {
 		return volume;
 	}
 	
+	//@return String
 	public String getManufacturer() {
 		return MANUFACTURER;
 	}
 	
+	//@return integer
 	public int getScreenSize() {
 		return SCREEN_SIZE;
 	}
