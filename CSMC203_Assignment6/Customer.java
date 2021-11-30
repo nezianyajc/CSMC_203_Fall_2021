@@ -1,3 +1,4 @@
+// CSMC203 Assignment-6 11-29-21
 
 public class Customer {
 	private String name;

@@ -1,3 +1,4 @@
+// CSMC203 Assignment-6 11-29-21
 
 public class Smoothie extends Beverage {
     private int numOfFruit;
@@ -16,7 +17,7 @@ public class Smoothie extends Beverage {
     	return numOfFruit;
     }
     
-    public boolean getAddProtein() {
+    public boolean getAddProtien() {
     	return proteinPowder;
     }
     
@@ -69,7 +70,7 @@ public class Smoothie extends Beverage {
     }
     
     public boolean equals(Smoothie smoothie) {
-    	if (super.equals(smoothie) && proteinPowder ==smoothie.getAddProtein() && numOfFruit ==smoothie.getNumOfFruits()) {
+    	if (super.equals(smoothie) && proteinPowder ==smoothie.getAddProtien() && numOfFruit ==smoothie.getNumOfFruits()) {
     		return true;
     	} else {
     		return false;

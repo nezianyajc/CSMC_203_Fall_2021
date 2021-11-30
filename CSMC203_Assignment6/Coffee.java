@@ -1,6 +1,6 @@
 
 public class Coffee extends Beverage {
-	boolean extraShot = true; boolean extraSyrup = true;
+	boolean extraShot, extraSyrup;
 	
 	private final double SHOT_COST = .50;
 	private final double SYRUP_COST = .50;

@@ -1,6 +1,7 @@
+// CSMC203 Assignment-6 11-29-21
 
 public class Alcohol extends Beverage {
-	private boolean theWeekend = true;
+	private boolean theWeekend;
 	private final double WEEKEND_FEE = .6;
 	
 	public boolean getIsWeekend() {
